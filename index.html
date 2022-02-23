@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="year">
+<button onclick="checkYear()">Check Year</button>
+</body>
+</html>
+<script>
+// - Năm NHUẬN là năm: %4==0 && %100!=0 HOẶC %400==0
+function checkYear() {
+    let year = document.getElementById('year').value;
+    if(year%4==0&&year%100!=0||year%400==0){
+        document.write('<h1 style="color:blue;">'+'Năm : '+year+' là năm nhuận!'+'</h1>')
+    } else {
+        document.write('<h1 style="color: red">'+'Năm: '+year+' không phải năm nhuận'+'</h1>')
+    }
+}
+
+</script>
